@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-#include <raylib.h> #library to work on/with sound
+ #include <raylib.h>
 
 int main()
 {
-    printf("Hello Music World!\n");
+    InitAudioDevice();
+    Sound sound = LoadSound("Tower of Dreams [TubeRipper.cc].flac");
     return 0;
 }

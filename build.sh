@@ -2,6 +2,7 @@
 
 set -xe
 
-CFLAGS="-Wall -Wextra"
+CFLAGS="-Wall -Wextra `pkg-config --cflags raylib`"
+LIBS="`pkg-config --cflags raylib`"
 
-clang -o musializer main.c
+clang -o musializer main.c $LIBS
